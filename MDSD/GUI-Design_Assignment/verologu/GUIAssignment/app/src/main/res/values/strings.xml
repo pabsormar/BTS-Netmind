@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">GUIAssignment</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_edit">Edit</string>
+
+    <string name="title">John Doe</string>
+    <string name="name_title">Name</string>
+    <string name="surname_title">Surname</string>
+    <string name="nationality_title">Nationality</string>
+    <string name="ue_citizen_title">UE Citizen</string>
+
+    <string name="name_data">John</string>
+    <string name="surname_data">Doe Pidgeon</string>
+    <string name="nationality_data">Kansas City</string>
+</resources>
