@@ -1,0 +1,40 @@
+In order to use the Volume enum, the Television class would need to look something like the following (only Volume related functionality shown)
+
+class Television {
+
+   public static final Volume DEFAULT_VOLUME = Volume.MEDUIM;
+   
+   private Volume volume;       // the volume
+
+   Television() { this(DEFAULT_BRAND, DEFAULT_VOLUME); }   
+   
+   Television(Volume volumeIn) { this(DEFAULT_BRAND, volumeIn); }
+   
+   Television(String brandIn, Volume volumeIn) {
+      this.setBrand(brandIn);
+      this.setVolume(volumeIn);
+   }
+   
+   public void setVolume(Volume volumeIn) { volume = volumeIn; }
+   
+   public Volume getVolume() { return volume;  }
+   
+   // returns a string representation of this class instance
+   public String toString()
+   {
+      return "Television: brand=" + this.getBrand() + ", volume=" + this.getVolume();
+   }
+   
+}
+
+The toString() method that outputs volume would now show something like:
+Television: brand=RCA, volume=MAX
+
+In the setVolume() method, there is nothing you need to do to validate incoming data - the method parameter is of type Volume, so the compiler will catch any attempt to set it to something other than a Volume value
+
+To add another volume value, you'd just need to change the enum, e.g.
+public enum Volume {
+  OFF, VERY_SOFT, SOFT, MEDUIM, LOUD, VERY_LOUD, 
+  WAY_TOO_LOUD,
+  MAX
+}

@@ -1,0 +1,1 @@
+Lab directories go in this directory.
